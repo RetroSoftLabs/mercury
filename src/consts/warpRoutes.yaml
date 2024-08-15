@@ -1,0 +1,23 @@
+# A list of Warp Route token configs
+# These configs will be merged with the warp routes in the configured registry
+# The input here is typically the output of the Hyperlane CLI warp deploy command
+---
+tokens:
+  - addressOrDenom: "0x86f514a0173006675F9Deb1CfB07Bd81638d6c3F"
+    chainName: sepolia
+    collateralAddressOrDenom: "0xd67D0a2AD000029432528aB6cBF31b815Be2407b"
+    connections:
+      - token: ethereum|fuji|0xB36cc3C2Da6529592F5b5595C81A6d7337d5E8E2
+    decimals: 18
+    name: CKEJ
+    standard: EvmHypCollateral
+    symbol: CKEJ
+  - addressOrDenom: "0xB36cc3C2Da6529592F5b5595C81A6d7337d5E8E2"
+    chainName: fuji
+    connections:
+      - token: ethereum|sepolia|0x86f514a0173006675F9Deb1CfB07Bd81638d6c3F
+    decimals: 18
+    name: CKEJ
+    standard: EvmHypSynthetic
+    symbol: CKEJ
+options: {}
